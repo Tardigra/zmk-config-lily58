@@ -97,14 +97,14 @@ ZMK_BEHAVIOR(dot_morph, mod_morph,
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
             // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | GUI  | TAB/L|  SPACE |  | ENTER | ESC/R| BSPC  | CTRL  |
+            //                     | ALT  | GUI  | TAB/N|  SPACE |  | ENTER | ESC/U|BSPC/S | CTRL  |
 
             bindings = <
 &kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                         &kp N6  &kp N7    &kp N8     &kp N9   &kp N0    &kp GRAVE
 &kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                          &kp Y   &kp U     &kp I      &kp O    &kp P     &kp MINUS
 &kp LCTRL  &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G        &kp H  &hmr RSHFT J  &hmr RGUI K  &hmr LALT L  &hmr RCTRL SEMI  &kp SQT
 &kp LSHFT  &kp Z   &kp X   &hml MEH C  &hml HYP V  &kp B   &kp LBKT     &kp RBKT  &kp N   &hmr HYP M  &hmr_meh MEH 0  &dot_morph  &kp FSLH  &kp RSHFT
-                           &kp LALT  &kp LGUI  &lt 1 TAB   &kp SPACE    &kp RET   &lt 2 ESC   &kp BSPC  &kp RCTRL
+                           &kp LALT  &kp LGUI  &lt 1 TAB   &kp SPACE    &kp RET   &lt 2 ESC   &lt 3 BSPC  &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -153,21 +153,21 @@ ZMK_BEHAVIOR(dot_morph, mod_morph,
         };
 
         adjust_layer {
-            display-name = "Adjust";
+            display-name = "SYM";
 
             // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
+            // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |   &   |   *   |  =   |   +   |       |
+            // |       |  {  |  }  |  [   |  ]   |  <   |                   |  >   |   (   |   )   |  -   |   _   |       |
+            // |       |  `  |  ~  |  |   |  \   |  :   |                   |  ;   |   '   |   "   |  ?   |   !   |       |
+            // |       |     |     |      |      |      |        |  |       |  =   |   >   |   .   |  /   |       |       |
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+&trans  &kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT                    &kp CARET  &kp AMPS  &kp STAR  &kp EQUAL  &kp PLUS   &trans
+&trans  &kp LBRC   &kp RBRC   &kp LBKT  &kp RBKT  &kp LT                       &kp GT     &kp LPAR  &kp RPAR  &kp MINUS  &kp UNDER  &trans
+&trans  &kp GRAVE  &kp TILDE  &kp PIPE  &kp BSLH  &kp COLON                    &kp SEMI   &kp SQT   &kp DQT   &kp QMARK  &kp EXCL   &trans
+&trans  &trans     &trans     &trans    &trans    &trans     &trans    &trans  &kp EQUAL  &kp GT    &kp DOT   &kp FSLH   &trans     &trans
+                              &trans    &trans    &trans     &trans    &trans  &trans     &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

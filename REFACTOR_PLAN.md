@@ -247,23 +247,39 @@ And change period to `&dot_morph`
 ---
 
 ### Step 13: Update NUM Layer ✅
-**Do**: Transform raise_layer into proper NUM layer with numpad layout
-- Left side: numpad layout (789, 456, 123, operators)
-- Right home row: modifiers (SHFT, GUI, ALT, CTRL) for modified number entry
-- Thumbs: DOT, SEMI for decimal/separator entry
-- Encoder: ( and ) for parentheses
+**Do**: Transform raise_layer into proper NUM layer with QWERTY-style layout
+- Top row: F1-F10 function keys for IDE debugging
+- Second row: 1-9, 0 in QWERTY order (familiar muscle memory)
+- Third row: ! @ # $ % ^ & * ( ) - shifted symbols in QWERTY order
+- Bottom row extras: F11 (left), F12 (right)
+- Right home row: modifiers (SHFT, GUI, ALT, CTRL) for combos
 **Safe**: Isolated layer, doesn't affect base
-**Commit**: `feat: implement NUM layer with numpad layout`
+**Commit**: `feat: implement NUM layer with QWERTY-style number and F-key layout`
 **Status**: COMPLETED - Ready to commit
 
 ---
 
-### Step 14-15: Update Other Layers
-Will detail when we reach them:
-- Step 14: FUN layer (function keys)
-- Step 15: UTIL layer (utilities, media)
+### Step 14: Add SYM Layer ✅
+**Do**: Transform adjust_layer into dedicated SYM layer for programming
+- Accessed by holding Backspace key (tap=Backspace, hold=SYM)
+- Right home row: ) = . - > (most frequent symbols)
+- Left home row: { } [ ] ( (all bracket types)
+- Optimized for inward rolls: => (arrow functions), ?. (optional chaining)
+- Common patterns for TS/JS/PHP
+**Safe**: Isolated layer, doesn't affect base
+**Commit**: `feat: add SYM layer with backspace hold for programming symbols`
+**Status**: COMPLETED - Ready to commit
 
-Each as separate compilable step.
+---
+
+### Step 15: Update UTIL Layer (Optional)
+The extra_layer (layer 4) currently has mouse movement controls.
+**Options**:
+- Keep as-is for mouse emulation
+- Convert to media/utility layer (volume, brightness, etc.)
+- Add additional programming symbols or IDE shortcuts
+
+Will implement if needed.
 
 ---
 
