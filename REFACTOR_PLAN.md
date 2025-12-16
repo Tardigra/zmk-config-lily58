@@ -246,9 +246,20 @@ And change period to `&dot_morph`
 
 ---
 
-### Step 13-15: Update Other Layers
+### Step 13: Update NUM Layer ✅
+**Do**: Transform raise_layer into proper NUM layer with numpad layout
+- Left side: numpad layout (789, 456, 123, operators)
+- Right home row: modifiers (SHFT, GUI, ALT, CTRL) for modified number entry
+- Thumbs: DOT, SEMI for decimal/separator entry
+- Encoder: ( and ) for parentheses
+**Safe**: Isolated layer, doesn't affect base
+**Commit**: `feat: implement NUM layer with numpad layout`
+**Status**: COMPLETED - Ready to commit
+
+---
+
+### Step 14-15: Update Other Layers
 Will detail when we reach them:
-- Step 13: NUM layer (numpad layout)
 - Step 14: FUN layer (function keys)
 - Step 15: UTIL layer (utilities, media)
 
