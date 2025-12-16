@@ -155,7 +155,7 @@ ZMK_BEHAVIOR(dot_morph, mod_morph,
 
 ---
 
-### Step 7: Add HRM Behaviors
+### Step 7: Add HRM Behaviors ✅
 **Do**: Add before `/ {`:
 ```c
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4
@@ -180,6 +180,7 @@ MAKE_HRM(hmr_meh, &kp, &comma_morph, KEYS_L THUMBS)
 **Don't**: Use in bindings yet
 **Safe**: Just defining
 **Commit**: `feat: add HRM behaviors`
+**Status**: COMPLETED - Ready to commit
 
 ---
 
