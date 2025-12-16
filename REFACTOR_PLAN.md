@@ -79,7 +79,7 @@ Integrate totem BSAG configuration (HRM, combos, mod-morphs) into lily58 while k
 
 ---
 
-### Step 4: Add Includes & Defines
+### Step 4: Add Includes & Defines ✅
 **Do**: Add to top of `lily58.keymap`:
 ```c
 #include "zmk-nodefree-config/helper.h"
@@ -96,10 +96,11 @@ Add after layer defines:
 **Don't**: Include combos yet, don't change bindings
 **Safe**: Just includes/defines
 **Commit**: `feat: add helper includes and common defines`
+**Status**: COMPLETED - Ready to commit
 
 ---
 
-### Step 5: Configure Standard Behaviors
+### Step 5: Configure Standard Behaviors ✅
 **Do**: Add before `/ {`:
 ```c
 &caps_word {
@@ -125,6 +126,7 @@ Add after layer defines:
 **Don't**: Change bindings
 **Safe**: Configuring existing behaviors
 **Commit**: `feat: configure caps_word, key_repeat, sk, lt`
+**Status**: COMPLETED - Ready to commit
 
 ---
 
