@@ -223,13 +223,14 @@ And change period to `&dot_morph`
 
 ---
 
-### Step 11: Update Base Layer - Thumb Cluster Layer-Taps
+### Step 11: Update Base Layer - Thumb Cluster Layer-Taps ✅
 **Do**: Update thumb cluster to use layer-tap (verify positions first):
 - Left thumbs: keep some traditional (ALT, GUI), add layer-taps
 - Right thumbs: similar approach
-**Details**: Will determine exact mapping when we reach this step
+**Details**: Converted mo 1 → lt 1 TAB, mo 2 → lt 2 ESC. Keeps SPACE/ENTER/BSPC unchanged.
 **Safe**: One change at a time
 **Commit**: `feat: add layer-tap thumb keys`
+**Status**: COMPLETED - Ready to commit
 
 ---
 
