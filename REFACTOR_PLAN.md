@@ -207,7 +207,7 @@ To:
 
 ---
 
-### Step 10: Update Base Layer - Bottom Row Special Keys
+### Step 10: Update Base Layer - Bottom Row Special Keys ✅
 **Do**: Change bottom row C, V, M, comma in default_layer from:
 ```c
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B ...  &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
@@ -219,6 +219,7 @@ To:
 And change period to `&dot_morph`
 **Safe**: Small change, builds on previous
 **Commit**: `feat: add MEH/HYP modifiers and mod-morphs to base layer`
+**Status**: COMPLETED - Ready to commit
 
 ---
 
