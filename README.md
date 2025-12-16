@@ -7,4 +7,4 @@
 
 
 # Bluetooth
-ZMK uses secure bluetooth profiles.  This means only one device per profile.  If you run into bluetooth issues I recommend wiping the stored profiles with BT_CLR_ALL button combo thats found on the lower layer.
+ZMK uses secure bluetooth profiles.  This means only one device per profile.  If you run into bluetooth issues I recommend wiping the stored profiles with BT_CLR_ALL button combo thats found on the lower layer.  If you want to flash your own firmware I have a guide on my website over at https://keyboard-hoarders.com/pages/guides-1
