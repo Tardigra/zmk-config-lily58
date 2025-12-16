@@ -111,21 +111,21 @@ ZMK_BEHAVIOR(dot_morph, mod_morph,
         };
 
         lower_layer {
-            display-name = "Lower";
+            display-name = "NAV";
 
             // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-            //                     |      |      |      |        |  |       |      |       |       |
+            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |  UP   |      |  PGUP |       |
+            // |       |     |     |      |      |      |                   |      | HOME  |  DOWN | END  |  PGDN |       |
+            // |       | CTRL| ALT | GUI  | SHFT |      |                   | LEFT | DOWN  |  UP   | RGHT |       |       |
+            // |       |     |     | MEH  | HYP  |      |        |  |       |      |       |       |      |       |       |
+            //                     |      |      |      |        |  |  RET  | BSPC |  DEL  |       |
 
             bindings = <
-&bt BT_CLR_ALL  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                    &studio_unlock  &trans     &trans     &trans    &trans    &trans
-&kp F1          &kp F2            &kp F3             &kp F4             &kp F5        &kp F6                          &kp F7          &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
-&kp GRAVE       &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR    &kp PRCNT                       &kp CARET       &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp TILDE
-&trans          &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &trans        &trans    &trans  &trans          &kp MINUS  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE
-                                                     &trans             &trans        &trans        &trans    &trans  &trans          &trans     &trans
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &kp UP     &trans    &kp PG_UP  &trans
+&trans          ___           ___           ___           ___           ___                             &trans     &kp HOME   &kp DOWN   &kp END   &kp PG_DN  &trans
+&trans          &kp LCTRL     &kp LALT      &kp LGUI      &kp LSHFT     ___                             &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT &trans     &trans
+&trans          ___           ___           &kp MEH       &kp HYP       ___           &trans    &trans  &trans     ___        ___        ___       &trans     &trans
+                                            &trans        &trans        &trans        &trans    &kp RET &kp BSPC   &kp DEL    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

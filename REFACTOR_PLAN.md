@@ -234,12 +234,23 @@ And change period to `&dot_morph`
 
 ---
 
-### Step 12-15: Update Other Layers
+### Step 12: Update NAV Layer ✅
+**Do**: Transform lower_layer into proper NAV layer matching totem
+- Left home row: modifiers (CTRL, ALT, GUI, SHFT) for modified navigation
+- Right side: navigation keys (arrows on home row, HOME/END/PGUP/PGDN)
+- Thumbs: RET, BSPC, DEL on right side
+- Keep Bluetooth controls on top row
+**Safe**: Isolated layer, doesn't affect base
+**Commit**: `feat: implement NAV layer with vim-style navigation`
+**Status**: COMPLETED - Ready to commit
+
+---
+
+### Step 13-15: Update Other Layers
 Will detail when we reach them:
-- Step 12: NAV layer
-- Step 13: NUM layer
-- Step 14: FUN layer
-- Step 15: UTIL layer
+- Step 13: NUM layer (numpad layout)
+- Step 14: FUN layer (function keys)
+- Step 15: UTIL layer (utilities, media)
 
 Each as separate compilable step.
 
