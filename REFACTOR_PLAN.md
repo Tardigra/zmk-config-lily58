@@ -184,10 +184,11 @@ MAKE_HRM(hmr_meh, &kp, &comma_morph, KEYS_L THUMBS)
 
 ---
 
-### Step 8: Enable Combos
+### Step 8: Enable Combos ✅
 **Do**: Add `#include "combos.dtsi"` after layer defines in lily58.keymap
 **Safe**: Combos work with current layout
 **Commit**: `feat: enable combo system`
+**Status**: COMPLETED - Ready to commit
 
 ---
 
