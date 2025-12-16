@@ -130,7 +130,7 @@ Add after layer defines:
 
 ---
 
-### Step 6: Add Mod-Morphs
+### Step 6: Add Mod-Morphs ✅
 **Do**: Add inside `/ {`, before keymap:
 ```c
 ZMK_BEHAVIOR(qexcl, mod_morph,
@@ -151,6 +151,7 @@ ZMK_BEHAVIOR(dot_morph, mod_morph,
 **Don't**: Use in bindings yet
 **Safe**: Just defining
 **Commit**: `feat: add mod-morph behaviors`
+**Status**: COMPLETED - Ready to commit
 
 ---
 
