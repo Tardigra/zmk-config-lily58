@@ -12,24 +12,27 @@ Integrate totem BSAG configuration (HRM, combos, mod-morphs) into lily58 while k
 
 ## Implementation Steps
 
-### Step 0: Preparation
+### Step 0: Preparation ✅
 **Do**: Copy plan to `/home/pinscher/keyboards/zmk-layouts/zmk-config-lily58/REFACTOR_PLAN.md`
 **Safe**: Docs only
 **Commit**: `docs: add refactor plan`
+**Status**: COMPLETED
 
 ---
 
-### Step 1: Copy Helper Library
+### Step 1: Copy Helper Library ✅
 **Do**: Copy `zmk-nodefree-config/` from totem to lily58 config dir
 **Safe**: Not yet included
 **Commit**: `feat: add zmk-nodefree-config library`
+**Status**: COMPLETED
 
 ---
 
-### Step 2: Create keypos_58keys.h
+### Step 2: Create keypos_58keys.h ✅
 **Do**: Create `config/zmk-nodefree-config/keypos_def/keypos_58keys.h` with lily58 position defines
 **Safe**: Not yet included
 **Commit**: `feat: add lily58 key position definitions`
+**Status**: COMPLETED - Ready to commit
 
 <details>
 <summary>Key positions to define</summary>
@@ -68,10 +71,11 @@ Integrate totem BSAG configuration (HRM, combos, mod-morphs) into lily58 while k
 
 ---
 
-### Step 3: Copy Combos
+### Step 3: Copy Combos ✅
 **Do**: Copy `combos.dtsi` from totem to lily58 config
 **Safe**: Not yet included
 **Commit**: `feat: add combo definitions`
+**Status**: COMPLETED - Ready to commit
 
 ---
 
