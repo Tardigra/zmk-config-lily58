@@ -1,0 +1,27 @@
+draw_config:
+  # Make keys larger to accommodate both tap and hold text
+  key_h: 60.0
+  key_w: 60.0
+
+  # Customize hold-tap display with more vertical padding for mod text
+  inner_pad_w: 2.0
+  inner_pad_h: 6.0
+
+  # Font sizes - tap text larger, hold text smaller
+  key_font_size: 14.0
+  small_font_size: 9.0
+
+  # Increase line spacing to separate tap and hold text clearly
+  line_spacing: 1.5
+
+  # Disable 3D key sides effect for cleaner text rendering
+  draw_key_sides: false
+
+  # Combo arc settings - smaller so they don't hide text
+  combo_w: 20.0
+  combo_h: 18.0
+  arc_scale: 0.75
+
+  # Text rendering
+  shrink_wide_legends: 4
+  append_colon_to_layer_header: false
