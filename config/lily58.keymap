@@ -113,19 +113,21 @@ ZMK_BEHAVIOR(dot_morph, mod_morph,
         lower_layer {
             display-name = "NAV";
 
+            // TOTEM COMPATIBLE - Top row and outer columns empty
+            // VIM navigation on right side (hjkl)
             // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |  UP   |      |  PGUP |       |
-            // |       |     |     |      |      |      |                   |      | HOME  |  DOWN | END  |  PGDN |       |
-            // |       | CTRL| ALT | GUI  | SHFT |      |                   | LEFT | DOWN  |  UP   | RGHT |       |       |
+            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+            // |       |BTCLR| BT0 |  BT1 |  BT2 | BT3  |                   | HOME | PGDN  | PGUP  | END  |       |       |
+            // |       | CTRL| ALT | GUI  | SHFT |      |                   |  ←   |   ↓   |   ↑   |  →   |       |       |
             // |       |     |     | MEH  | HYP  |      |        |  |       |      |       |       |      |       |       |
             //                     |      |      |      |        |  |  RET  | BSPC |  DEL  |       |
 
             bindings = <
-&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &kp UP     &trans    &kp PG_UP  &trans
-&trans          ___           ___           ___           ___           ___                             &trans     &kp HOME   &kp DOWN   &kp END   &kp PG_DN  &trans
-&trans          &kp LCTRL     &kp LALT      &kp LGUI      &kp LSHFT     ___                             &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT &trans     &trans
-&trans          ___           ___           &kp MEH       &kp HYP       ___           &trans    &trans  &trans     ___        ___        ___       &trans     &trans
-                                            &trans        &trans        &trans        &trans    &kp RET &kp BSPC   &kp DEL    &trans
+&trans          &trans         &trans        &trans        &trans        &trans                          &trans     &trans     &trans     &trans    &trans     &trans
+&trans          &bt BT_CLR_ALL &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END   &trans     &trans
+&trans          &kp LCTRL      &kp LALT      &kp LGUI      &kp LSHFT     ___                             &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT &trans     &trans
+&trans          ___            ___           &kp MEH       &kp HYP       ___           &trans    &trans  &trans     ___        ___        ___       &trans     &trans
+                                             &trans        &trans        &trans        &trans    &kp RET &kp BSPC   &kp DEL    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -134,18 +136,19 @@ ZMK_BEHAVIOR(dot_morph, mod_morph,
         raise_layer {
             display-name = "NUM";
 
+            // TOTEM COMPATIBLE - Top row and outer columns empty
             // ------------------------------------------------------------------------------------------------------------
+            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
             // |       | F1  | F2  |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |       |
             // |       |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-            // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |   &   |   *   |  (   |   )   |       |
-            // |  F11  |     |     |      |      |      |        |  |       |      | SHFT  | GUI   | ALT  | CTRL  |  F12  |
+            // |       | F11 | F12 |      |      |      |        |  |       |      | SHFT  | GUI   | ALT  | CTRL  |       |
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
+&trans   &trans    &trans  &trans    &trans     &trans                        &trans     &trans     &trans     &trans    &trans     &trans
 &trans   &kp F1    &kp F2  &kp F3    &kp F4     &kp F5                        &kp F6     &kp F7     &kp F8     &kp F9    &kp F10    &trans
 &trans   &kp N1    &kp N2  &kp N3    &kp N4     &kp N5                        &kp N6     &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&trans   &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT                     &kp CARET  &kp AMPS   &kp STAR   &kp LPAR  &kp RPAR   &trans
-&kp F11  &trans    &trans  &trans    &trans     &trans     &trans    &trans  &trans     &kp LSHFT  &kp LGUI   &kp LALT  &kp LCTRL  &kp F12
+&trans   &kp F11   &kp F12 &trans    &trans     &trans     &trans    &trans  &trans     &kp LSHFT  &kp LGUI   &kp LALT  &kp LCTRL  &trans
                            &trans    &trans     &trans     &trans    &trans  &trans     &trans     &trans
             >;
 
@@ -155,18 +158,21 @@ ZMK_BEHAVIOR(dot_morph, mod_morph,
         adjust_layer {
             display-name = "SYM";
 
+            // TOTEM COMPATIBLE - Top row and outer columns empty
+            // Optimized for common rolls: -> => != == >= <= && || ++ --
+            // Right hand: =, > adjacent for => and >=; -, > for ->; <, = for <=
             // ------------------------------------------------------------------------------------------------------------
-            // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |   &   |   *   |  =   |   +   |       |
-            // |       |  {  |  }  |  [   |  ]   |  <   |                   |  >   |   (   |   )   |  -   |   _   |       |
-            // |       |  `  |  ~  |  |   |  \   |  :   |                   |  ;   |   '   |   "   |  ?   |   !   |       |
-            // |       |     |     |      |      |      |        |  |       |  =   |   >   |   .   |  /   |       |       |
+            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+            // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |   &   |   *   |  +   |   _   |       |
+            // |       |  {  |  }  |  [   |  ]   |  <   |                   |  =   |   >   |   (   |  )   |   -   |       |
+            // |       |  `  |  ~  |  |   |  \   |  :   |        |  |       |  ;   |   '   |   "   |  ?   |   /   |       |
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans  &kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT                    &kp CARET  &kp AMPS  &kp STAR  &kp EQUAL  &kp PLUS   &trans
-&trans  &kp LBRC   &kp RBRC   &kp LBKT  &kp RBKT  &kp LT                       &kp GT     &kp LPAR  &kp RPAR  &kp MINUS  &kp UNDER  &trans
-&trans  &kp GRAVE  &kp TILDE  &kp PIPE  &kp BSLH  &kp COLON                    &kp SEMI   &kp SQT   &kp DQT   &kp QMARK  &kp EXCL   &trans
-&trans  &trans     &trans     &trans    &trans    &trans     &trans    &trans  &kp EQUAL  &kp GT    &kp DOT   &kp FSLH   &trans     &trans
+&trans  &trans     &trans     &trans    &trans    &trans                       &trans     &trans    &trans    &trans     &trans     &trans
+&trans  &kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT                    &kp CARET  &kp AMPS  &kp STAR  &kp PLUS   &kp UNDER  &trans
+&trans  &kp LBRC   &kp RBRC   &kp LBKT  &kp RBKT  &kp LT                       &kp EQUAL  &kp GT    &kp LPAR  &kp RPAR   &kp MINUS  &trans
+&trans  &kp GRAVE  &kp TILDE  &kp PIPE  &kp BSLH  &kp COLON  &trans    &trans  &kp SEMI   &kp SQT   &kp DQT   &kp QMARK  &kp FSLH   &trans
                               &trans    &trans    &trans     &trans    &trans  &trans     &trans    &trans
             >;
 
